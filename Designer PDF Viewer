@@ -1,0 +1,26 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the designerPdfViewer function below.
+def designerPdfViewer(h, word):
+    numbers = []
+    height = []
+    max_height = 0
+    area = 0
+    letter = ''
+    for letter in word:
+        number = ord(letter) - 97
+        numbers.append(number)
+        temp = h[number]
+        height.append(temp)
+    max_height = max(height)
+    area = max_height*len(word)
+    print(area)
+h = list(map(int, input().rstrip().split()))
+word = list(map(str, input()))
+designerPdfViewer(h, word)
