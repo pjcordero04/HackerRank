@@ -1,0 +1,20 @@
+import math
+import os
+import random
+import re
+import sys
+
+def reverseList(arr):
+    #revArr = []
+    separator = ' '
+    revArr = arr[::-1]
+    print(separator.join(revArr))
+        
+
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(str, input().rstrip().split()))
+
+
+reverseList(arr)
