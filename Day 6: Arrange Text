@@ -1,0 +1,15 @@
+def arrangeText(S):
+    S.split()
+    even = []
+    odd = []
+    str1 = ''
+    for i in range(0,len(S),2):
+        even.append(S[i])
+    for i in range(1,len(S),2):
+        odd.append(S[i])
+    print(str1.join(even) + " " + str1.join(odd))
+
+T = int(input(''))
+for i in range(T):
+    S = input('')
+    arrangeText(S)
