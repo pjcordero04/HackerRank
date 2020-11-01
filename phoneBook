@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+nameSearch = []
+def phoneBook(contact,nameSearch,n):
+    for name in nameSearch:
+        if contact.get(name, 'Not found') == 'Not found':
+            print('Not found')
+        else:
+            print(name + '=' + contact.get(name, 'Not found'))
+
+    
+query = 0
+n= int(input())
+contact = dict(input().split() for _ in range(n))
+while query <= 100000:
+    name = input()
+    if name == '':
+        break
+    else:
+        nameSearch.append(name)
+        query += 1
+
+phoneBook(contact,nameSearch,n)
